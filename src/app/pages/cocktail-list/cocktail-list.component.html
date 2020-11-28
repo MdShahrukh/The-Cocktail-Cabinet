@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-xs col-sm- col-md">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a [routerLink]="['/cocktail-list']"
+            [queryParams]="{filterType: filterType, value: filterValue}">Cocktail by {{filterType}} /
+            {{filterValue}}</a>
+        </li>
+      </ol>
+    </nav>
+  </div>
+  <div class="col-xs col-sm- col-md text-right">
+    <div class="sort-dropdown">
+      <label for="sorting">Sort By:</label>
+      <select>
+        <option disabled>Select</option>
+        <option>Name</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="card-columns">
+  <div class="card" *ngFor="let drink of drinks | async">
+    <img class="card-img-top" [src]="drink.strDrinkThumb" alt="Cocktail-image">
+    <div class="card-body">
+      <button class="accordion" (click)="getCocktailDetails(drink)">{{drink.strDrink}}</button>
+      <div class="panel" *ngIf="drink.showDetails">
+        <ul *ngIf="!drink.isLoading">
+          <li><b>Catagory: </b>{{drink.strCategory}}</li>
+          <li><b>Alchohlic: </b>{{drink.strAlcoholic}}</li>
+          <li><b>Glass: </b>{{drink.strGlass}}</li>
+          <li><b>Instructions: </b>{{drink.strInstructions}}</li>
+          <li><b>Ingredients: ></b>{{drink.strIngredient1}},
+            {{drink.strIngredient2}},{{drink.strIngredient3}},{{drink.strIngredient4}},{{drink.strIngredient5}}</li>
+          <li><b>Measurements: </b>{{drink.strMeasure1}}, {{drink.strMeasure2}}, {{drink.strMeasure3}},
+            {{drink.strMeasure4}},
+            {{drink.strMeasure5}}</li>
+          <li><b>Instructions: </b>{{drink.strInstructions}}</li>
+          <li><b>Detail Instructions: </b>{{drink.strInstructionsDE}}</li>
+        </ul>
+        <ng-container *ngIf="drink.isLoading">
+          <div class="loader">
+            <img src="../../../assets/images/loader.svg" alt="loading..." height="50px" />
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-container *ngIf="drinks.length === 0 && !isLoading">
+  <div class="no-data">
+    SORRY! NO DATA FOUND.
+  </div>
+</ng-container>
+<ng-container *ngIf="isLoading">
+  <div class="loader">
+    <img src="../../../assets/loader/loader.svg" alt="loading..." height="50px" />
+  </div>
+</ng-container>

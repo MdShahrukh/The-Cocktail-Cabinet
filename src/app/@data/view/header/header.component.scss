@@ -1,0 +1,111 @@
+.header {
+    padding: 12px 20px;
+    font-size: 1.0em;
+    font-weight: 600;
+    z-index: 1;
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 0px 8px 1px #00000036;
+    letter-spacing: 1px;
+
+    .heading {
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+
+.filter {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 575px) {
+    .header {
+        padding: 14px 23px;
+        padding-bottom: 15px;
+        display: flex;
+        .name {
+            flex-basis: 93%;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .header {
+        display: block;
+        .filter {
+            display: none;
+        }
+    }
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  font-family: monospace;
+}
+
+ul {
+  background: darkorange;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  color: #fff;
+  background: #fff;
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+li ul li {
+    color: grey;
+}
+
+li ul li:hover {
+  color: #fff;
+}
+
+ul li a {
+    color: #A45241;
+}
+
+li:hover {
+  background: grey;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}

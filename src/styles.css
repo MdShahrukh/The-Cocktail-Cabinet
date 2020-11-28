@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans' !important;
+    font-size: 14px;
+    background: #eae7e0;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.marginTop15 {
+    margin-top: 15px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.wrap {
+    flex-wrap: wrap;
+}
+.relative {
+    position: relative;
+}
+/*  For Scrollbar - Customization */
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 3px rgb(173, 173, 173); 
+border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: rgba(180, 180, 180, 0.767); 
+border-radius: 8px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: rgb(161, 161, 161); 
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

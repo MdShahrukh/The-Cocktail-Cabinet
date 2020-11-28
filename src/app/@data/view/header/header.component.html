@@ -1,0 +1,41 @@
+<div class="header">
+    <h2 class="heading"><b>The Cocktail Cabinet</b></h2>
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul id="navigation" class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> COCKTAILS BY CATAGORY</a>
+              <ul>
+                <li *ngFor="let catagory of catagoryList"><a [routerLink]="['/cocktail-list']" [queryParams]="{filterType: 'catagory', value: catagory}">{{catagory}}</a></li>
+            </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">COCKTAILS BY GLASS</a>
+              <ul>
+                <li *ngFor="let glassType of glassList"><a [routerLink]="['/cocktail-list']" [queryParams]="{filterType: 'glass', value: glassType}">{{glassType}}</a></li>
+            </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">COCKTAILS BY INGREDIENT</a>
+              <ul>
+                <li *ngFor="let ingredientType of ingredient"><a [routerLink]="['/cocktail-list']" [queryParams]="{filterType: 'ingredient', value: ingredientType}">{{ingredientType}}</a></li>
+            </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">COCKTAILS BY ALCHOHOL</a>
+                <ul>
+                  <li *ngFor="let alchohalType of alchohalList"><a [routerLink]="['/cocktail-list']" [queryParams]="{filterType: 'alchohal', value: alchohalType}">{{alchohalType}}</a></li>
+              </ul>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0" #searchForm="ngForm" (ngSubmit)="searchCocktail(searchForm.value)">
+            <input class="form-control mr-sm-2" name="search" type="search" [(ngModel)]="searchValue" placeholder="Search" aria-label="Search a Cocktail">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+</div>

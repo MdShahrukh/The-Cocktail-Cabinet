@@ -1,0 +1,45 @@
+.main img {
+    max-width: 400px;
+  }
+  
+  ul li {
+    list-style-type: none;
+  }
+  .section-content li {
+      display: inline;
+  }
+  
+  .list-item {
+    margin: 0 0 .5rem;
+    padding: 0;
+    text-align: center;
+    width: auto;
+    margin-right: 2rem;
+    padding-bottom: 0;
+  }
+  
+  .list-item a {
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: .8125rem;
+    line-height: 16px;
+    color: #000;
+    letter-spacing: .01rem;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  
+  .section-content {
+    text-align: center;
+  }
+  
+  .heading-content {
+    padding-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .card-img-top {
+      padding: 10px;
+  }
