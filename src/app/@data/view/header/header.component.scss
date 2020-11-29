@@ -21,25 +21,25 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 575px) {
-    .header {
-        padding: 14px 23px;
-        padding-bottom: 15px;
-        display: flex;
-        .name {
-            flex-basis: 93%;
-        }
-    }
-}
+// @media screen and (max-width: 575px) {
+//     .header {
+//         padding: 14px 23px;
+//         padding-bottom: 15px;
+//         display: flex;
+//         .name {
+//             flex-basis: 93%;
+//         }
+//     }
+// }
 
-@media screen and (min-width: 576px) {
-    .header {
-        display: block;
-        .filter {
-            display: none;
-        }
-    }
-}
+// @media screen and (min-width: 576px) {
+//     .header {
+//         display: block;
+//         .filter {
+//             display: none;
+//         }
+//     }
+// }
 
 a {
   text-decoration: none;

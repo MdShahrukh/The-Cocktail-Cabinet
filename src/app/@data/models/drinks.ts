@@ -13,11 +13,14 @@ export class Drink {
     strIngredient2: string;
     strIngredient3: string;
     strIngredient4: string;
+    strIngredient5: string;
     strMeasure1: string;
     strMeasure2: string;
     strMeasure3: string;
+    strMeasure4: string;
+    strMeasure5: string;
     strCreativeCommonsConfirmed: string;
-    dateModifie: string;
+    dateModified: string;
     isLoading: boolean;
     showDetails: boolean;
 }

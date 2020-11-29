@@ -5,12 +5,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Open Sans' !important;
-    font-size: 14px;
-    background: #eae7e0;
-}
-
 .fixed {
     position: fixed;
 }

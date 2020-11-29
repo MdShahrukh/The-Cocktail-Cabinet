@@ -4,7 +4,7 @@ import { Drink } from 'src/app/@data/models/drinks';
 @Component({
   selector: 'app-cocktai-details',
   templateUrl: './cocktai-details.component.html',
-  styleUrls: ['./cocktai-details.component.css']
+  styleUrls: ['./cocktai-details.component.scss']
 })
 
 export class CocktaiDetailsComponent implements OnInit {

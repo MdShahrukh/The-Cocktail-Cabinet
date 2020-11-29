@@ -9,12 +9,11 @@ import { CocktailsData, Drink } from 'src/app/@data/models/drinks';
 @Component({
   selector: 'app-cocktail-list',
   templateUrl: './cocktail-list.component.html',
-  styleUrls: ['./cocktail-list.component.css']
+  styleUrls: ['./cocktail-list.component.scss']
 })
 export class CocktailListComponent implements OnInit {
 
   constructor(private cocktailService: CocktailService, private activatedRouter: ActivatedRoute) { }
-  // drinks: Drink[] = [];
   drinks: BehaviorSubject<any[]> = new BehaviorSubject<Drink[]>([]);
   filterType: string;
   filterValue: string;

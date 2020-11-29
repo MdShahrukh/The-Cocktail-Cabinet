@@ -50,13 +50,8 @@
     </div>
   </div>
 </div>
-<ng-container *ngIf="drinks.length === 0 && !isLoading">
+<ng-container *ngIf="(drinks | async)?.length === 0">
   <div class="no-data">
     SORRY! NO DATA FOUND.
-  </div>
-</ng-container>
-<ng-container *ngIf="isLoading">
-  <div class="loader">
-    <img src="../../../assets/loader/loader.svg" alt="loading..." height="50px" />
   </div>
 </ng-container>

@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CocktaiDetailsComponent } from '../cocktai-details/cocktai-details.component';
 
 import { HomeComponent } from './home.component';
 
@@ -8,7 +10,8 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      imports: [HttpClientModule],
+      declarations: [ HomeComponent, CocktaiDetailsComponent ]
     })
     .compileComponents();
   }));
