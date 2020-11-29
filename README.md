@@ -30,7 +30,7 @@ Kept the batch size equals to 6 (instead of loading all the data get from API) a
 dded unit test cases for components to test the business logics of the application. Please find the screenshot for the same. Use ng test to run all the test-cases.
 Link to Image - https://github.com/MdShahrukh/The-Cocktail-Cabinet/blob/master/docs/karmatest-runner.PNG
 
-![](https://github.com/MdShahrukh/The-Cocktail-Cabinet/blob/master/docs/lighthouse-test.PNG)
+![](https://github.com/MdShahrukh/The-Cocktail-Cabinet/blob/master/docs/karmatest-runner.PNG)
 
 ##### 5. Formatting Checker
 
