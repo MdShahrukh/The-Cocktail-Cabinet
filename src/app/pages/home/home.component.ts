@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
     this.randomDrink = new Drink();
     this.cocktailService.getRandomCocktail().subscribe((data: CocktailsData) => {
       this.randomDrink = data.drinks[0];
-      console.log(this.randomDrink);
     });
   }
 }

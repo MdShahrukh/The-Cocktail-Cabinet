@@ -4,4 +4,4 @@ export const FILTER_TYPES = {
     glass: 'glass',
     ingredient: 'ingredient',
     search: 'search'
-}
+};

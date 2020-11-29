@@ -23,10 +23,10 @@
 
 <hr>
 <div class="card-columns">
-  <div class="card" *ngFor="let drink of drinks | async">
+  <div class="card" *ngFor="let drink of drinks$ | async">
     <img class="card-img-top" [src]="drink.strDrinkThumb" alt="Cocktail-image">
     <div class="card-body">
-      <button class="accordion" (click)="getCocktailDetails(drink)">{{drink.strDrink}}</button>
+      <button class="accordion" (click)="getCocktailDetails(drink)" title="click to view details">{{drink.strDrink}}</button>
       <div class="panel" *ngIf="drink.showDetails">
         <ul *ngIf="!drink.isLoading">
           <li><b>Catagory: </b>{{drink.strCategory}}</li>
@@ -50,8 +50,16 @@
     </div>
   </div>
 </div>
-<ng-container *ngIf="(drinks | async)?.length === 0">
+<ng-container *ngIf="(drinks$ | async)?.length === 0">
   <div class="no-data">
     SORRY! NO DATA FOUND.
   </div>
 </ng-container>
+<ng-container *ngIf="isLoading">
+  <div class="loader">
+    <img src="../../../assets/images/loader.svg" alt="loading..." height="50px" />
+  </div>
+</ng-container>
+
+<div infiniteScroll [infiniteScrollThrottle]="1000" [fromRoot]="true" (scrolled)="onScroll()">
+</div>

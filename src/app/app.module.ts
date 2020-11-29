@@ -1,17 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app.routing-module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './@data/view/header/header.component';
 import { FooterComponent } from './@data/view/footer/footer.component';
-import { AppRoutingModule } from './app.routing-module';
-import { ApiService } from './@core/Services/api.service';
-import { CocktailService } from './@core/Services/cocktail.service';
-import { HttpClientModule } from '@angular/common/http';
 import { CocktaiDetailsComponent } from './pages/cocktai-details/cocktai-details.component';
 import { CocktailListComponent } from './pages/cocktail-list/cocktail-list.component';
-import { FormsModule } from '@angular/forms';
+
+import { ApiService } from './@core/Services/api.service';
+import { CocktailService } from './@core/Services/cocktail.service';
+
 
 @NgModule({
   declarations: [
@@ -24,9 +27,10 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     AppRoutingModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    InfiniteScrollModule
   ],
   providers: [
     ApiService,
